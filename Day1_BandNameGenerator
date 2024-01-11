@@ -1,0 +1,4 @@
+print("Holla! This is the most awesome band name generator in the world!")
+city = input("Yo, where'd you grow up, fam? What city you reppin'?\n")
+pet = input("Yo fam! What is the name of your pet? Best believe its cute!\n")
+print("Yo fam! Your awesome band name is " + city + "_" + pet + "!")
