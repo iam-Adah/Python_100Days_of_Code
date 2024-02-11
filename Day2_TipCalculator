@@ -1,0 +1,26 @@
+print("Welcome to the tip calculator!")
+#This allows you to input the amount of bill incurred
+bill = input("How much is the bill?")
+#This allows the input of tip amount
+tip = input("How much would you like to give as tip?")
+#Allows you to enter the number of people to split the bill
+split_bill = input("How many poeple would split the bill?")
+#This converts the various variables into their required datatypes
+bill_as_float = float(bill)
+tip_as_int = int(tip)
+split_bill_as_int = int(split_bill)
+#Convert the tip as a percentage
+tip_as_percentage = tip_as_int / 100
+#Tip amount in respect to the bill
+tip_amount = bill_as_float * tip_as_percentage
+#Total bill which equals the sum of the calculated tip and the bill
+total_bill = (bill_as_float + tip_amount)
+#Ensures the right datatype for the total bill
+total_bill_as_float = float(total_bill)
+#Calculates the bill to be paid per person, and then round the final amount to 2 d.p
+bill_per_person = total_bill_as_float / split_bill_as_int
+final_amount = round(bill_per_person, 2)
+#This ensures that the zero after the decimal point is included in the 2 d.p counting
+final_amount = "{:.2f}".format(bill_per_person)
+#f string used to print out the final amount to be paid per person
+print(f"Each person should pay £{final_amount}")
